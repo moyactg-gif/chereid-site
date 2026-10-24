@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHÉ REID — Suits and Culture</title>
+<meta name="description" content="CHÉ REID — Jamaican-authored menswear. Tailoring meets street codes. Collection preview and First Listen, Brixton, London.">
+<meta property="og:title" content="CHÉ REID — Suits and Culture">
+<meta property="og:description" content="Jamaican-authored menswear. Tailoring meets street codes.">
+<meta property="og:image" content="assets/look-green-cape.webp">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14110E; --ink2:#1C1814; --cream:#ECE4D6; --cream2:#F4EFE6; --muted:#A79C8C; --line:rgba(236,228,214,.18);
+  --amber:#B8864B; --tobacco:#6B4A2E;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--mono);font-weight:300;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.caps{font-family:var(--sans);text-transform:uppercase;letter-spacing:.42em;font-weight:400}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.rule{width:44px;height:1px;background:currentColor;opacity:.5;margin:26px 0}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;
+  background:linear-gradient(rgba(20,17,14,.85),rgba(20,17,14,0))}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:34px;height:auto}
+.brand span{font-family:var(--sans);letter-spacing:.32em;font-size:14px}
+nav ul{list-style:none;display:flex;gap:26px}
+nav ul a{text-decoration:none;font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
+nav ul a:hover{opacity:1;color:var(--amber)}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;overflow:hidden}
+.hero-text{padding:120px 24px 80px max(24px,calc((100vw - 1200px)/2 + 24px));position:relative;z-index:2}
+.hero h1{font-family:var(--sans);font-weight:300;font-size:clamp(46px,7.4vw,96px);letter-spacing:.16em;line-height:1;margin-left:-.05em}
+.hero .tag{margin-top:18px;font-size:12px;color:var(--muted)}
+.hero p.lead{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);line-height:1.4;max-width:420px;color:var(--cream)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:15px 26px;border:1px solid var(--cream);text-decoration:none;
+  font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;transition:.25s;background:transparent;color:inherit;cursor:pointer}
+.btn:hover{background:var(--cream);color:var(--ink)}
+.btn.solid{background:var(--cream);color:var(--ink)}
+.btn.solid:hover{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.hero-img{position:relative;height:100%;min-height:100svh}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(20,17,14,.15) 30%,rgba(20,17,14,0) 60%),linear-gradient(0deg,rgba(20,17,14,.6),rgba(20,17,14,0) 35%)}
+.side-note{position:absolute;right:28px;bottom:34px;z-index:3;text-align:center;font-size:10px;line-height:2.1;color:var(--cream);opacity:.85}
+
+/* VINYL */
+.vinyl-wrap{position:absolute;z-index:3;left:calc(51.2% + 8px);bottom:9%;width:250px;height:250px;filter:drop-shadow(0 25px 40px rgba(0,0,0,.6))}
+.vinyl{width:100%;height:100%;border-radius:50%;cursor:pointer;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(255,255,255,.06) 34.4%, transparent 35%),
+    repeating-radial-gradient(circle at 50% 50%, #0b0a09 0 2px, #171513 2.6px 3.2px),
+    #0e0d0c;
+  animation:spin 5.5s linear infinite;position:relative}
+.vinyl::before{content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 20deg,rgba(255,255,255,0) 0deg,rgba(255,255,255,.10) 30deg,rgba(255,255,255,0) 70deg,rgba(255,255,255,0) 200deg,rgba(255,255,255,.07) 230deg,rgba(255,255,255,0) 260deg)}
+.vinyl .label{position:absolute;inset:32%;border-radius:50%;background:var(--cream);display:grid;place-items:center;box-shadow:inset 0 0 0 4px #d9cdb8}
+.vinyl .label img{width:72%}
+.vinyl .label::after{content:"";position:absolute;width:7%;height:7%;border-radius:50%;background:var(--ink);top:46.5%;left:46.5%}
+.vinyl-wrap:hover .vinyl{animation-duration:1.8s}
+.vinyl-cap{position:absolute;top:100%;left:0;right:0;text-align:center;margin-top:14px;font-size:10px;color:var(--muted)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.vinyl{animation:none}}
+
+/* EVENT STRIP */
+.event{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink2)}
+.event .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:34px;padding-bottom:34px;flex-wrap:wrap}
+.event h2{font-family:var(--sans);font-weight:300;font-size:clamp(22px,3vw,34px);letter-spacing:.38em}
+.event .meta{font-size:12px;color:var(--muted);letter-spacing:.3em;line-height:2}
+.event .meta b{color:var(--cream);font-weight:400}
+
+/* ABOUT (cream) */
+.about{background:var(--cream2);color:var(--ink)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:110px;padding-bottom:110px}
+.about h3{font-family:var(--sans);font-weight:400;font-size:15px;letter-spacing:.38em;text-transform:uppercase;line-height:1.8}
+.about p{font-size:15px;max-width:460px}
+.about .pull{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.3;margin-top:28px;max-width:460px}
+.about figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about figcaption{margin-top:10px;font-size:10px;color:#6f665a}
+
+/* TRACKLIST */
+.tracks{padding:110px 0}
+.tracks .head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.tracks h3{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7vw,88px);line-height:.95;letter-spacing:.02em}
+.tracks .kicker{font-size:11px;color:var(--muted)}
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:16px;padding:24px 4px;border-bottom:1px solid var(--line);transition:.25s;text-decoration:none}
+.row:hover{background:rgba(236,228,214,.04);padding-left:14px}
+.row .n{font-family:var(--sans);font-size:15px;color:var(--muted);letter-spacing:.1em}
+.row .t{font-family:var(--sans);font-size:clamp(17px,2.2vw,24px);letter-spacing:.14em;text-transform:uppercase;font-weight:300}
+.row .s{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(184,134,75,.5);padding:5px 10px}
+.side{font-size:11px;color:var(--muted);margin:0 0 14px;letter-spacing:.38em}
+
+/* LOOKS */
+.looks{padding:0 0 110px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid figure{position:relative;overflow:hidden}
+.grid img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s ease}
+.grid figure:hover img{transform:scale(1.04)}
+.grid figcaption{position:absolute;left:16px;bottom:14px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-family:var(--sans);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+/* FORM (cream) */
+.contact{background:var(--cream);color:var(--ink)}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;padding-top:110px;padding-bottom:110px}
+.contact h3{font-family:var(--sans);font-weight:300;font-size:clamp(26px,3.4vw,40px);letter-spacing:.3em;text-transform:uppercase;line-height:1.3}
+.contact .intro p{margin-top:8px;max-width:380px}
+.contact .mail{margin-top:30px;font-size:13px}
+.contact .mail a{text-decoration:none;border-bottom:1px solid currentColor}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.f{display:flex;flex-direction:column;gap:7px}
+.f.full{grid-column:1/-1}
+label{font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase}
+input,select,textarea{font:inherit;font-size:15px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid rgba(20,17,14,.45);padding:10px 2px;border-radius:0;outline:none;width:100%}
+select{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2314110E'/%3E%3C/svg%3E") no-repeat right 4px center}
+textarea{resize:vertical;min-height:90px;border:1px solid rgba(20,17,14,.3);padding:12px}
+input:focus,select:focus,textarea:focus{border-color:var(--ink)}
+.consent{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;font-family:var(--mono);font-size:12px;line-height:1.6;text-transform:none;letter-spacing:0}
+.consent input{width:16px;height:16px;margin-top:3px;flex:none;accent-color:var(--ink)}
+.hp{position:absolute;left:-9999px}
+form .btn{grid-column:1/-1;justify-content:center;border-color:var(--ink);background:var(--ink);color:var(--cream);padding:18px}
+form .btn:hover{background:var(--tobacco);border-color:var(--tobacco)}
+.msg{grid-column:1/-1;font-size:13px;display:none}
+.msg.ok{display:block;color:#2f5d3a}.msg.ko{display:block;color:#8d2b1f}
+
+/* FOOTER */
+footer{padding:60px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer .brand img{width:46px}
+footer small{font-size:11px;color:var(--muted);letter-spacing:.08em}
+footer .links{display:flex;gap:22px;font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+footer .links a{text-decoration:none}
+.privacy{margin-top:26px;font-size:11px;color:var(--muted);max-width:760px}
+
+/* MOBILE */
+@media (max-width:860px){
+  nav ul{gap:16px} nav ul li:not(:last-child){display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-img{order:-1;min-height:78svh}
+  .hero-img::after{background:linear-gradient(0deg,var(--ink) 2%,rgba(20,17,14,0) 45%)}
+  .hero-text{padding:0 24px 70px;margin-top:-120px}
+  .vinyl-wrap{width:150px;height:150px;left:auto;right:18px;top:calc(78svh - 210px);bottom:auto}
+  .vinyl-cap{display:none}
+  .side-note{display:none}
+  .about .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px;padding-top:80px;padding-bottom:80px}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid figure:last-child{grid-column:1/-1}
+  .grid figure:last-child img{aspect-ratio:4/3}
+  form{grid-template-columns:1fr}
+  .row{grid-template-columns:44px 1fr auto}
+  .tracks,.looks{padding-bottom:80px}.tracks{padding-top:80px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><img src="assets/emblem-light.png" alt=""><span>CHÉ REID</span></a>
+  <ul>
+    <li><a href="#tracklist">Collection</a></li>
+    <li><a href="#first-listen">First Listen</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-text">
+    <h1>CHÉ<br>REID</h1>
+    <p class="tag caps">Suits and Culture</p>
+    <div class="rule"></div>
+    <p class="lead">Jamaican-authored menswear.<br>Tailoring meets street codes.</p>
+    <div class="btns">
+      <a class="btn solid" href="#contact">Register interest</a>
+      <a class="btn" href="#tracklist">Explore the collection</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="assets/look-green-cape.webp" alt="CHÉ REID look: green cape over a cream tailored suit, burgundy fedora">
+    <div class="side-note caps">Tailoring<br>×<br>Streetcodes</div>
+  </div>
+  <div class="vinyl-wrap" title="Now playing: Collection Preview">
+    <div class="vinyl"><div class="label"><img src="assets/emblem-dark.png" alt="CHÉ REID emblem"></div></div>
+    <div class="vinyl-cap caps">Now playing — Side A</div>
+  </div>
+</header>
+
+<section class="event" id="first-listen">
+  <div class="wrap">
+    <div>
+      <p class="side caps">Live presentation</p>
+      <h2>FIRST LISTEN</h2>
+    </div>
+    <p class="meta caps"><b>25 . 10 . 26</b><br>Brixton, London</p>
+    <a class="btn" href="#contact" data-interest="RSVP – First Listen (25.10.26)">RSVP</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h3>Jamaican-authored<br>menswear.</h3>
+      <div class="rule"></div>
+      <p>CHÉ REID reworks familiar menswear through tailoring, streetwear and the influence of Jamaican culture. Shaped by a British-Jamaican perspective, each piece balances ease, structure and personal expression — made for men who want to stand apart without dressing for spectacle.</p>
+      <p class="pull">Tailoring that behaves casually. Culture in the construction.</p>
+    </div>
+    <figure>
+      <img src="assets/look-red-door.webp" alt="CHÉ REID look: sleeveless red tailored shirt with check patch pocket and pocket chain, in a Brixton record shop" loading="lazy">
+      <figcaption class="caps">Pocket chain · heritage check patch</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="tracks" id="tracklist">
+  <div class="wrap">
+    <div class="head">
+      <h3>The Collection</h3>
+      <p class="kicker caps">A CHÉ REID collection / 2026 — Preview</p>
+    </div>
+    <p class="side caps">Side A — Tracklist</p>
+    <div class="list">
+      <a class="row" href="#contact" data-interest="Garment enquiry – Prestige Rasta"><span class="n">01</span><span class="t">Prestige Rasta</span><span class="s">Preview</span></a>
+      <a class="row" href="#contact" data-interest="Garment enquiry – Denim as Tailoring"><span class="n">02</span><span class="t">Denim as Tailoring</span><span class="s">Preview</span></a>
+      <a class="row" href="#contact" data-interest="Garment enquiry – Rasta Sportswear"><span class="n">03</span><span class="t">Rasta Sportswear</span><span class="s">Preview</span></a>
+      <a class="row" href="#contact" data-interest="Garment enquiry – Everyday Uniform"><span class="n">04</span><span class="t">Everyday Uniform</span><span class="s">Preview</span></a>
+      <a class="row" href="#contact" data-interest="Garment enquiry – Heritage Reworked"><span class="n">05</span><span class="t">Heritage Reworked</span><span class="s">Preview</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="looks">
+  <div class="wrap">
+    <div class="grid">
+      <figure><img src="assets/look-cream-corridor.webp" alt="CHÉ REID cream relaxed suit with printed scarf and carved cane" loading="lazy"><figcaption>Cream suiting</figcaption></figure>
+      <figure><img src="assets/look-red-full.webp" alt="CHÉ REID red coordinated set with pocket chain" loading="lazy"><figcaption>Red coordinated set</figcaption></figure>
+      <figure><img src="assets/look-cream-portrait.webp" alt="CHÉ REID cream jacket with burgundy fedora" loading="lazy"><figcaption>The cream jacket</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="intro">
+      <h3>Register<br>your interest</h3>
+      <div class="rule"></div>
+      <p>Be the first to hear about the collection, request pricing or made-to-order details, or RSVP for the First Listen.</p>
+      <p class="mail">Or write to <a href="mailto:info@chereid.com">info@chereid.com</a></p>
+    </div>
+    <form id="interest" action="https://formsubmit.co/ajax/info@chereid.com" method="post" novalidate>
+      <div class="f"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div>
+      <div class="f"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      <div class="f"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="f"><label for="interest-type">I'm interested in *</label>
+        <select id="interest-type" name="interest" required>
+          <option value="">Choose…</option>
+          <option>Collection updates</option>
+          <option>Pricing &amp; made-to-order</option>
+          <option>Garment enquiry</option>
+          <option>RSVP – First Listen (25.10.26)</option>
+        </select>
+      </div>
+      <div class="f full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us which look, your size or anything else."></textarea></div>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree to CHÉ REID storing my details to reply to my enquiry and to send me news about the collection. I can unsubscribe at any time.</span></label>
+      <button class="btn" type="submit">Send</button>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/emblem-light.png" alt=""><span>CHÉ REID</span></a>
+    <div class="links"><a href="#tracklist">Collection</a><a href="#contact">Contact</a><a href="mailto:info@chereid.com">info@chereid.com</a></div>
+  </div>
+  <div class="wrap"><p class="privacy">© 2026 CHÉ REID — Suits and Culture, London. Details sent through this form are used only to reply to you and to share CHÉ REID news; they are never sold or shared. To have your details removed, email info@chereid.com.</p></div>
+</footer>
+
+<script>
+(function(){
+  var sel=document.getElementById('interest-type');
+  document.querySelectorAll('[data-interest]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var v=a.getAttribute('data-interest');
+      if(v.indexOf('Garment enquiry')===0){sel.value='Garment enquiry';var m=document.getElementById('message');if(!m.value)m.value=v.replace('Garment enquiry – ','Look: ')+'\n';}
+      else{sel.value=v;}
+    });
+  });
+  var f=document.getElementById('interest'),msg=document.getElementById('msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();msg.className='msg';
+    if(f.website.value)return;
+    if(!f.name.value.trim()||!/^\S+@\S+\.\S+$/.test(f.email.value)||!sel.value||!f.consent.checked){
+      msg.textContent='Please add your name, a valid email, your interest and tick the consent box.';msg.className='msg ko';return;}
+    var b=f.querySelector('button');b.disabled=true;b.textContent='Sending…';
+    var fd=new FormData(f);fd.delete('website');
+    fd.append('_subject','New CHÉ REID enquiry — '+sel.value+' — '+f.name.value);
+    fd.append('_template','table');fd.append('_captcha','false');fd.append('_replyto',f.email.value);
+    fetch(f.action,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json();})
+      .then(function(d){if(!(d.success===true||d.success==='true'))throw 0;f.reset();msg.textContent='Thank you — your details are in. We will be in touch personally.';msg.className='msg ok';})
+      .catch(function(){msg.innerHTML='Sorry, that did not go through. Please email <a href="mailto:info@chereid.com">info@chereid.com</a>.';msg.className='msg ko';})
+      .finally(function(){b.disabled=false;b.textContent='Send';});
+  });
+})();
+</script>
+</body>
+</html>
